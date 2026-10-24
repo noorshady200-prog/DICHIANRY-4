@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>قاموس رحلة خليفة إلى الهند الناطق</title>
+<style>
+:root{--bg1:#eaf4fb;--bg2:#fdf6e9;--ink:#0b1f3a;--card:#fff;--line:rgba(11,31,58,.18);--gold:#d98e04;--nav:rgba(234,244,251,.95);--on:#fff1cc;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0b1f3a;--bg2:#0a4a5c;--ink:#f1f5f9;--card:rgba(255,255,255,.09);--line:rgba(255,255,255,.2);--gold:#f5b942;--nav:rgba(11,31,58,.95);--on:rgba(245,185,66,.3);color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#0b1f3a;--bg2:#0a4a5c;--ink:#f1f5f9;--card:rgba(255,255,255,.09);--line:rgba(255,255,255,.2);--gold:#f5b942;--nav:rgba(11,31,58,.95);--on:rgba(245,185,66,.3);color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px)}
+body{font-family:Calibri,Arial,sans-serif;color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2)) fixed;background-color:var(--bg1);min-height:100%;padding:0 14px 40px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:10}
+header{text-align:center;padding:12px 0 2px}
+h1{font-size:clamp(20px,4.8vw,30px)}
+header p{opacity:.85;margin-top:4px;font-size:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:8px;overflow-x:auto;padding:10px 2px;background:var(--nav)}
+nav a{flex:none;text-align:center;line-height:1.25;color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:5px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+nav a small{display:block;font-size:12px;opacity:.8}
+section{max-width:1000px;margin:18px auto}
+h2{display:flex;justify-content:space-between;padding:6px 14px;border-radius:10px 10px 0 0;font-size:15px;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:0 0 14px 14px}
+.list{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.w{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer;transition:background .15s,transform .1s}
+.w:hover{background:var(--on)}.w:active{transform:scale(.97)}
+.w.on{background:var(--on);border-color:var(--gold)}
+.w:focus-visible,nav a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.e{font-size:34px;line-height:1.2}
+.ar{font-size:19px;font-weight:700}
+.en{font-size:12.5px;opacity:.85;direction:ltr}
+.list .w{flex-direction:row;gap:12px;padding:8px 12px;text-align:center}
+.list .t{flex:1;display:flex;flex-direction:column;align-items:center}
+.list .ar{font-size:17px}.list .e{font-size:30px}
+#note{display:none;max-width:1000px;margin:10px auto;padding:10px 16px;border-radius:12px;background:var(--on);border:1px solid var(--gold);text-align:center}
+.hint{text-align:center;opacity:.85;margin-top:14px;font-size:15px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><h1>🔊 قاموس رحلة خليفة إلى الهند</h1><p>الوحدة: السفر والسياحة ✈️</p><p>اضغط على البطاقة لتسمع النطق بالعربية</p></header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<p class="hint">مفردات • صفات • أفعال • أنشطة • تراكيب • أدوات الربط</p>
+<script>
+const S=[
+["nouns","المفردات","Vocabulary","#2563eb","g",[
+["الْعُطْلَةُ الصَّيْفِيَّة","Summer vacation","☀️"],["الطَّائِرَة","The airplane","✈️"],["الْعَائِلَة","The family","👨‍👩‍👧‍👦"],["الْهِنْد","India","🇮🇳"],
+["الْكَامِيرَا","The camera","📷"],["الصُّوَر","The photos","🖼️"],["سَاعَاتٌ طَوِيلَة","Long hours","⏳"],["الْمَدِينَة","The city","🏙️"],
+["نِيو دِلْهِي","New Delhi","📍"],["الشَّوَارِع","The streets","🛣️"],["الْأَلْوَان","The colors","🎨"],["الْأَنْوَار","The lights","💡"],
+["النَّاس","The people","👥"],["الْمَلَابِس","The clothes","👗"],["تَاج مَحَل","Taj Mahal","🕌"],["الْقَصْر","The palace","🏛️"]]],
+["adj","الصفات","Adjectives","#0e7490","g",[
+["سَعِيد","Happy","😊"],["زَاهِيَة","Bright / colorful","🌈"],["صَغِيرَة","Small","🤏"],["جَمِيلَة","Beautiful","🌸"],
+["طَوِيلَة","Long","📏"],["أَبْيَض","White","⚪"],["كَبِيرَة","Big","🐘"]]],
+["verbs","الأفعال","Verbs","#16a34a","g",[
+["أَحْمِلُ","I carry","🎒"],["أَلْتَقِطُ","I take","📸"],["أُسَافِرُ","I travel","🧳"],["أَزُورُ","I visit","🗺️"],["أَرْتَدِي","I wear","👚"],
+["أَصِلُ","I arrive","🛬"],["أَنْبَهِرُ","I am amazed","🤩"],["أَرَى","I see","👀"],["أَلْتَقِطُ صُوَرًا","I take photos","📷"],["أَكُونُ سَعِيدًا","I am happy","😄"]]],
+["act","الأنشطة","Activities","#ea580c","l",[
+["أَلْتَقِطُ صُوَرًا جَمِيلَة","Take beautiful photos","📸"],["أَحْمِلُ كَامِيرَا صَغِيرَة","Carry a small camera","📷"],["أُسَافِرُ إِلَى الْهِنْد","Travel to India","🇮🇳"],
+["أَصِلُ إِلَى نِيو دِلْهِي","Arrive in New Delhi","📍"],["أَزُورُ تَاج مَحَل","Visit the Taj Mahal","🕌"],["أَرْكَبُ الطَّائِرَةَ مَعَ عَائِلَتِي","Fly with my family","✈️"],
+["أَرَى الشَّوَارِعَ الْمَلِيئَةَ بِالْأَلْوَان","See colorful streets","🛣️"],["أَرْتَدِي مَلَابِسَ زَاهِيَة","Wear bright clothes","👗"],["أَنْبَهِرُ بِجَمَالِ الْقَصْر","Be amazed by the palace","🤩"],
+["أَلْتَقِطُ صُوَرًا بِجَانِبِ الْقَصْر","Take photos beside the palace","🏛️"],["أَصِلُ بَعْدَ سَاعَاتٍ طَوِيلَة","Arrive after many hours","⏳"],["أَزُورُ الْقَصْرَ الشَّهِير","Visit the famous palace","🏰"],
+["أَقْضِي الْعُطْلَةَ الصَّيْفِيَّة","Spend the summer vacation","☀️"],["أُسَافِرُ مَعَ عَائِلَتِي","Travel with my family","👨‍👩‍👧‍👦"],["أَرَى الْأَنْوَارَ الْجَمِيلَة","See the beautiful lights","💡"]]],
+["pat","التراكيب","Sentence patterns","#be185d","l",[
+["أُفَضِّلُ السَّفَرَ إِلَى ...","I prefer traveling to ...","✈️"],["لَا أُفَضِّلُ السَّفَرَ إِلَى ...","I don’t prefer traveling to ...","🚫"],
+["أَحْبَبْتُ ... وَلَمْ أُحِبَّ ...","I liked ... and I didn’t like ...","👍"],["فِي الْيَوْمِ الْأَوَّلِ زُرْنَا ...","On the first day, we visited ...","1️⃣"],
+["اسْتَمْتَعْتُ بِـ ...","I enjoyed ...","🎉"],["بَعْدَ ذَلِكَ الْتَقَطْتُ ...","After that, I took ...","📸"],
+["فِي رَأْيِي، ...","In my opinion, ...","💭"],["كَانَ الْقَصْرُ ...","The palace was ...","🏛️"],
+["أَشْعُرُ بِالسَّعَادَةِ عِنْدَمَا ...","I feel happy when ...","😊"],["أَنْصَحُ بِزِيَارَةِ ...","I recommend visiting ...","🌟"]]],
+["con","أدوات الربط","Connecting words","#7e22ce","g",[
+["مَعَ","With","👭"],["إِلَى","To","➡️"],["فِي","In","📍"],["وَ","And","➕"],["بَعْدَ","After","⏭️"],
+["عِنْدَمَا","When","⏰"],["لَكِنْ","But","↔️"],["بِجَانِبِ","Beside","👫"],["لِـ","To / for","🎁"],["جِدًّا","Very","⭐"]]]
+];
+let voices=[],cur=null;
+function load(){voices=speechSynthesis.getVoices()}
+if('speechSynthesis' in window){load();speechSynthesis.onvoiceschanged=load}
+function say(text,card){
+ if(!('speechSynthesis' in window)){alert('المتصفح لا يدعم الصوت');return}
+ speechSynthesis.cancel();
+ const u=new SpeechSynthesisUtterance(text.replace(/\.{2,}|…/g,' ').replace(/ـ/g,'').replace(/[\/]/g,' '));
+ u.lang='ar-SA';u.rate=.8;
+ const v=voices.find(v=>v.lang.replace('_','-').toLowerCase().startsWith('ar'));if(v)u.voice=v;
+ if(cur)cur.classList.remove('on');cur=card;card.classList.add('on');
+ u.onend=u.onerror=()=>card.classList.remove('on');
+ speechSynthesis.speak(u)}
+const nav=document.getElementById('nav'),main=document.getElementById('main');
+S.forEach(([id,ar,en,col,kind,items])=>{
+ nav.insertAdjacentHTML('beforeend',`<a href="#${id}">${ar}<small dir="ltr">${en}</small></a>`);
+ const sec=document.createElement('section');sec.id=id;
+ sec.innerHTML=`<h2 style="background:${col}"><span>${ar}</span><span dir="ltr">${en}</span></h2>`;
+ const g=document.createElement('div');g.className='grid'+(kind==='l'?' list':'');
+ items.forEach(([a,e,x])=>{
+  const c=document.createElement('button');c.className='w';c.setAttribute('aria-label','استمع: '+a);
+  const em=document.createElement('span');em.className='e';em.textContent=x;
+  const ta=document.createElement('span');ta.className='ar';ta.textContent='🔊 '+a;
+  const te=document.createElement('span');te.className='en';te.textContent=e;
+  if(kind==='l'){const m=document.createElement('span');m.className='t';m.append(ta,te);c.append(em,m)}
+  else c.append(em,ta,te);
+  c.onclick=()=>say(a,c);g.append(c)});
+ sec.append(g);main.append(sec)});
+</script></body></html>
